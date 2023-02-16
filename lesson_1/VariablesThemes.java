@@ -1,25 +1,24 @@
 public class VariablesTheme {
 
     public static void main(String[] args) {
-        System.out.println("ЗАДАЧА 1");
-        byte CPU = 8;
-        short RAM = 16;
-        int RAM2 = 3600;
-        long HDD = 40000;
+        System.out.println("1. Вывод значений переменных на консоль");
+        byte cpu = 8;
+        short ram = 16;
+        int freq = 3600;
+        long hdd = 40000;
         float power = 800.00f;
         double cost = 70.500;
-        char CPU_char = 'i';
+        char cpuIndex = 'i';
         boolean play = true;
-        System.out.println("Процессор: Intel Core " + CPU_char + "7;");
-        System.out.println("Количество ядер: " + CPU + ";");
-        System.out.println("Оперативная память: " + RAM + " GGB DDR4 с частотой от " + RAM2
+        System.out.println("Процессор: Intel Core " + cpuIndex + "7;");
+        System.out.println("Количество ядер: " + cpu + ";");
+        System.out.println("Оперативная память: " + ram + " GGB DDR4 с частотой от " + freq
                 + " Мгц;");
-        System.out.println("Место на диске: " + HDD + " Мб;");
+        System.out.println("Место на диске: " + hdd + " Мб;");
         System.out.println("Мощность БП: " + power + " Вт;");
         System.out.println("Игровой: " + play + ";");
         System.out.println("Цена: " + cost + ";");
-        System.out.println();
-        System.out.println("ЗАДАЧА 2");
+        System.out.println("\n2. Расчет стоимости товара со скидкой");
         int book = 200;
         int pen = 100;
         float cell = 11;
@@ -28,55 +27,51 @@ public class VariablesTheme {
         System.out.println("Общая стоимость товаров: " + total);
         System.out.println("Сумма скидки: " + (total * cell) / 100);
         System.out.println("Общая стоимость товаров со скидкой: " + total_cell);
-        System.out.println();
-        System.out.println("ЗАДАЧА 3");
+        System.out.println("\n3. Вывод слова JAVA");
         System.out.println("   J    a  v     v  a   ");
         System.out.println("   J   a a  v   v  a a  ");
         System.out.println("J  J  aaaaa  V V  aaaaa ");
         System.out.println(" JJ  a     a  V  a     a");
-        System.out.println();
-        System.out.println("ЗАДАЧА 4");
-        byte byte01 = 127;
-        short short01 = 32767;
-        int int01 = 2147483647;
-        long long01 = 9223372036854775807l;
-        System.out.println("Первоначальное значение " + byte01 + " Значение после инкремента " + 
-                ++byte01 + " Значение после декремента " + --byte01);
-        System.out.println("Первоначальное значение " + short01 + " Значение после инкремента " + 
-                ++short01 + " Значение после декремента " + --short01);
-        System.out.println("Первоначальное значение " + int01 + " Значение после инкремента " + 
-                ++int01 + " Значение после декремента " + --int01);
-        System.out.println("Первоначальное значение " + long01 + " Значение после инкремента " + 
-                ++long01 + " Значение после декремента " + --long01);
-        System.out.println();
-        System.out.println("ЗАДАЧА 5");
-        int a = 2;
-        int b = 5;
-        int c;
+        System.out.println("\n4. Вывод min и max значений целых числовых типов");
+        byte byteMax = 127;
+        short shortMax = 32767;
+        int intMax = 2147483647;
+        long longMax = 9223372036854775807l;
+        System.out.println("Первоначальное значение " + byteMax + ". Значение после инкремента = " +
+                ++byteMax + ". Значение после декремента = " + --byteMax);
+        System.out.println("Первоначальное значение " + shortMax + ". Значение после инкремента = "
+                + ++shortMax + ". Значение после декремента = " + --shortMax);
+        System.out.println("Первоначальное значение " + intMax + ". Значение после инкремента = " +
+                ++intMax + ". Значение после декремента = " + --intMax);
+        System.out.println("Первоначальное значение " + longMax + ". Значение после инкремента = " +
+                ++longMax + ". Значение после декремента = " + --longMax);
+        System.out.println("\n5. Перестановка значений переменных");
+        int var1 = 2;
+        int var2 = 5;
+        int var3;
         System.out.println("С помощью третьей переменной");
-        System.out.println("исходные значения: a =" + a + " b = " + b);
-        c = a;
-        a = b;
-        b = c;
-        System.out.println("новые значения: a =" + a + " b = " + b);
+        System.out.println("исходные значения: a = " + var1 + " b = " + var2);
+        var3 = var1;
+        var1 = var2;
+        var2 = var3;
+        System.out.println("новые значения: a = " + var1 + " b = " + var2);
         System.out.println("С помощью арифметических операций");
-        a = 2;
-        b = 5;
-        System.out.println("исходные значения: a =" + a + " b = " + b);
-        a = a + b;
-        b = a - b;
-        a = a - b;
-        System.out.println("новые значения: a =" + a + " b = " + b);
+        var1 = 2;
+        var2 = 5;
+        System.out.println("исходные значения: a = " + var1 + " b = " + var2);
+        var1 = var1 + var2;
+        var2 = var1 - var2;
+        var1 = var1 - var2;
+        System.out.println("новые значения: a = " + var1 + " b = " + var2);
         System.out.println("С помощью побитовой операции");
-        a = 2;
-        b = 5;
-        System.out.println("исходные значения: a =" + a + " b = " + b);
-        a = a ^ b;
-        b = b ^ a;
-        a = a ^ b;
-        System.out.println("новые значения: a =" + a + " b = " + b);
-        System.out.println();
-        System.out.println("ЗАДАЧА 6");
+        var1 = 2;
+        var2 = 5;
+        System.out.println("исходные значения: a = " + var1 + " b = " + var2);
+        var1 = var1 ^ var2;
+        var2 = var2 ^ var1;
+        var1 = var1 ^ var2;
+        System.out.println("новые значения: a = " + var1 + " b = " + var2);
+        System.out.println("\n6. Вывод символов и их кодов");
         char ch1 = '#';
         int int1 = 35;
         char ch2 = '&';
@@ -92,8 +87,7 @@ public class VariablesTheme {
         System.out.printf(int3 + " " + ch3 + "\n");
         System.out.printf(int4 + " " + ch4 + "\n");
         System.out.printf(int5 + " " + ch5 + "\n");
-        System.out.println();
-        System.out.println("ЗАДАЧА 7");
+        System.out.println("\n7. Вывод в консоль ASCII-арт Дюка");
         char symbol1 = '/';
         char symbol2 = '_';
         char symbol3 = '(';
@@ -105,23 +99,21 @@ public class VariablesTheme {
         System.out.println("  " + symbol1 + "      " + symbol5);
         System.out.println(" " + symbol1 + "" + symbol2 + "" + symbol2 + "" + symbol2 + "" + symbol2
                 + "" + symbol1 + "" + symbol5 + "" + symbol2 + "" + symbol2 + "" + symbol5);
-        System.out.println();
-        System.out.println("ЗАДАЧА 8");
+        System.out.println("\n8. Вывод количества сотен, десятков и единиц числа");
         int number = 123;
-        int x, y, z;
-        x = number % 1000 / 100;
-        y = number % 100 / 10;
-        z = number % 10;
-        int sum_number = x + y + z;
-        int increase_num = x * y * z;
+        int rank1, rank2, rank3;
+        rank1 = number % 1000 / 100;
+        rank2 = number % 100 / 10;
+        rank3 = number % 10;
+        int sum_number = rank1 + rank2 + rank3;
+        int increase_num = rank1 * rank2 * rank3;
         System.out.println("Число " + number + " содержит:");
-        System.out.println(x + " сотен");
-        System.out.println(y + " десятков");
-        System.out.println(z + " едениц");
+        System.out.println(rank1 + " сотню");
+        System.out.println(rank2 + " десятка");
+        System.out.println(rank3 + " еденицы");
         System.out.println("Сумма его цифр = " + sum_number);
         System.out.println("Произведение его цифр = " + increase_num);
-        System.out.println();
-        System.out.println("ЗАДАЧА 9");
+        System.out.println("\n9. Вывод времени");
         int num = 86399;
         int hour = (num / 3600);
         int minutes = num / 60 % 60;
