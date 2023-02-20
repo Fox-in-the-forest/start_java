@@ -30,6 +30,7 @@ public class VariablesTheme {
         System.out.println("Общая стоимость товаров: " + sumGoods);
         System.out.println("Сумма скидки: " + discountAmount);
         System.out.println("Общая стоимость товаров со скидкой: " + discountPrice);
+        
         System.out.println("\n3. Вывод слова JAVA");
         System.out.println("   J    a  v     v  a   ");
         System.out.println("   J   a a  v   v  a a  ");
