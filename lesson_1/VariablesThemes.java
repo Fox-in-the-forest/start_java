@@ -76,12 +76,12 @@ public class VariablesTheme {
         System.out.println("\n6. Вывод символов и их кодов");
         char octothorp = '#';
         char ampersand = '&';
-        char commercialAt = '@';
+        char commercial = '@';
         char circumflex = '^';
         char underscore = '_';
         System.out.println((int) octothorp + " " + octothorp);
         System.out.println((int) ampersand + " " + ampersand);
-        System.out.println((int) commercialAt + " " + commercialAt);
+        System.out.println((int) commercial + " " + commercial);
         System.out.println((int) circumflex + " " + circumflex);
         System.out.println((int) underscore + " " + underscore);
 
@@ -94,7 +94,7 @@ public class VariablesTheme {
         System.out.println(forwardSlash + slash);
         System.out.println(forwardSlash + underscore + openParenthesis + closeParenthesis + slash);
         System.out.println(forwardSlash + slash);
-        System.out.println(forwardSlash + underscore + underscore + underscore + underscore
+        System.out.println(forwardSlash + underscore + underscore + underscore + underscore 
                 + forwardSlash + slash + underscore + underscore + slash);
 
         System.out.println("\n8. Вывод количества сотен, десятков и единиц числа");
