@@ -1,7 +1,6 @@
 public class VariablesTheme {
 
     public static void main(String[] args) {
-
         System.out.println("1. Вывод значений переменных на консоль");
         byte cpu = 8;
         short ram = 16;
@@ -25,12 +24,12 @@ public class VariablesTheme {
         int penPrice = 100;
         int discount = 11;
         int sumGoods = bookPrice + penPrice;
-        int discountAmount = ((sumGoods * discount)/100);
+        int discountAmount = ((sumGoods * discount) / 100);
         float discountPrice = (sumGoods - discountAmount);
         System.out.println("Общая стоимость товаров: " + sumGoods);
         System.out.println("Сумма скидки: " + discountAmount);
         System.out.println("Общая стоимость товаров со скидкой: " + discountPrice);
-        
+
         System.out.println("\n3. Вывод слова JAVA");
         System.out.println("   J    a  v     v  a   ");
         System.out.println("   J   a a  v   v  a a  ");
@@ -63,15 +62,15 @@ public class VariablesTheme {
         System.out.println("новые значения: a = " + number1 + " b = " + number2);
         System.out.println("С помощью арифметических операций");
         System.out.println("исходные значения: a = " + number1 + " b = " + number2);
-        number1 = number1 + number2;
+        number1 += number2;
         number2 = number1 - number2;
-        number1 = number1 - number2;
+        number1 -= number2;
         System.out.println("новые значения: a = " + number1 + " b = " + number2);
         System.out.println("С помощью побитовой операции");
         System.out.println("исходные значения: a = " + number1 + " b = " + number2);
-        number1 = number1 ^ number2;
-        number2 = number2 ^ number1;
-        number1 = number1 ^ number2;
+        number1 ^= number2;
+        number2 ^= number1;
+        number1 ^= number2;
         System.out.println("новые значения: a = " + number1 + " b = " + number2);
 
         System.out.println("\n6. Вывод символов и их кодов");
@@ -80,46 +79,43 @@ public class VariablesTheme {
         char commercialAt = '@';
         char circumflex = '^';
         char underscore = '_';
-        System.out.println((int)octothorp + " " + octothorp);
-        System.out.println((int)ampersand + " " + ampersand);
-        System.out.println((int)commercialAt + " " + commercialAt);
-        System.out.println((int)circumflex + " " + circumflex);
-        System.out.println((int)underscore + " " + underscore);
+        System.out.println((int) octothorp + " " + octothorp);
+        System.out.println((int) ampersand + " " + ampersand);
+        System.out.println((int) commercialAt + " " + commercialAt);
+        System.out.println((int) circumflex + " " + circumflex);
+        System.out.println((int) underscore + " " + underscore);
 
         System.out.println("\n7. Вывод в консоль ASCII-арт Дюка");
-        char forwardSlashArt = '/';
-        char underscoreArt = '_';
-        char openParenthesisArt = '(';
-        char closeParenthesisArt = ')';
-        char backSlashArt = '\\';
-        System.out.println("     " + forwardSlashArt + backSlashArt);
-        System.out.println("    " + forwardSlashArt + "  " + backSlashArt);
-        System.out.println("   " + forwardSlashArt + "" + underscoreArt + "" + openParenthesisArt
-                + " " + closeParenthesisArt + backSlashArt);
-        System.out.println("  " + forwardSlashArt + "      " + backSlashArt);
-        System.out.println(" " + forwardSlashArt + "" + underscoreArt + "" + underscoreArt + ""
-                + underscoreArt + "" + underscoreArt + "" + forwardSlashArt + "" + backSlashArt
-                + "" + underscoreArt + "" + underscoreArt + "" + backSlashArt);
+        char forwardSlash = '/';
+        char openParenthesis = '(';
+        char closeParenthesis = ')';
+        char slash = '\\';
+        System.out.println(forwardSlash + slash);
+        System.out.println(forwardSlash + slash);
+        System.out.println(forwardSlash + underscore + openParenthesis + closeParenthesis + slash);
+        System.out.println(forwardSlash + slash);
+        System.out.println(forwardSlash + underscore + underscore + underscore + underscore
+                + forwardSlash + slash + underscore + underscore + slash);
 
         System.out.println("\n8. Вывод количества сотен, десятков и единиц числа");
         int number = 123;
-        int hundred = number / 100;
-        int ten = number % 100 / 10;
-        int one = number % 10;
-        int sumNumber = hundred + ten + one;
-        int increaseNumber = hundred * ten * one;
+        int hundreds = number / 100;
+        int tens = number % 100 / 10;
+        int ones = number % 10;
+        int sumDigits = hundreds + tens + ones;
+        int prodDigits = hundreds * tens * ones;
         System.out.println("Число " + number + " содержит:");
-        System.out.println(hundred + " сотню");
-        System.out.println(ten + " десятка");
-        System.out.println(one + " единицы");
-        System.out.println("Сумма его цифр = " + sumNumber);
-        System.out.println("Произведение его цифр = " + increaseNumber);
+        System.out.println(hundreds + " сотню");
+        System.out.println(tens + " десятка");
+        System.out.println(ones + " единицы");
+        System.out.println("Сумма его цифр = " + sumDigits);
+        System.out.println("Произведение его цифр = " + prodDigits);
 
         System.out.println("\n9. Вывод времени");
-        int manySeconds = 86399;
-        int hour = (manySeconds / 3600);
-        int minutes = manySeconds / 60 % 60;
-        int seconds = manySeconds  % 60;
-        System.out.println(hour + ":" + minutes + ":" + seconds);
+        int totalSeconds = 86399;
+        int hours = (totalSeconds / 3600);
+        int minutes = totalSeconds / 60 % 60;
+        int seconds = totalSeconds  % 60;
+        System.out.println(hours + ":" + minutes + ":" + seconds);
     }
 }
