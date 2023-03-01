@@ -12,7 +12,7 @@ public class VariablesTheme {
         System.out.println("Процессор: Intel Core " + cpuIndex + "7;");
         System.out.println("Количество ядер: " + cpu + ";");
         System.out.println("Оперативная память: " + ram + " GGB DDR4 с частотой от " + freq
-            + " Мгц;");
+                + " Мгц;");
         System.out.println("Место на диске: " + hdd + " Мб;");
         System.out.println("Мощность БП: " + power + " Вт;");
         System.out.println("Игровой: " + play + ";");
@@ -41,13 +41,13 @@ public class VariablesTheme {
         int intMax = 2147483647;
         long longMax = 9223372036854775807l;
         System.out.println("Первоначальное значение " + byteMax + ". Значение после инкремента = " +
-            ++byteMax + ". Значение после декремента = " + --byteMax);
+                ++byteMax + ". Значение после декремента = " + --byteMax);
         System.out.println("Первоначальное значение " + shortMax + ". Значение после инкремента = "
-            + ++shortMax + ". Значение после декремента = " + --shortMax);
+                + ++shortMax + ". Значение после декремента = " + --shortMax);
         System.out.println("Первоначальное значение " + intMax + ". Значение после инкремента = " +
-            ++intMax + ". Значение после декремента = " + --intMax);
+                ++intMax + ". Значение после декремента = " + --intMax);
         System.out.println("Первоначальное значение " + longMax + ". Значение после инкремента = " +
-            ++longMax + ". Значение после декремента = " + --longMax);
+                ++longMax + ". Значение после декремента = " + --longMax);
 
         System.out.println("\n5. Перестановка значений переменных");
         int number1 = 2;
@@ -92,10 +92,10 @@ public class VariablesTheme {
         System.out.println("    " + forwardSlash + backSlash);
         System.out.println("   " + forwardSlash + "  " + backSlash);
         System.out.println("  " + forwardSlash + underscore + openParenthesis + " "
-            + closeParenthesis + backSlash);
+                + closeParenthesis + backSlash);
         System.out.println(" " + forwardSlash + "      " + backSlash);
         System.out.println("" + forwardSlash + underscore + underscore + underscore + underscore
-            + forwardSlash + backSlash + underscore + underscore + backSlash);
+                + forwardSlash + backSlash + underscore + underscore + backSlash);
 
         System.out.println("\n8. Вывод количества сотен, десятков и единиц числа");
         int number = 123;
