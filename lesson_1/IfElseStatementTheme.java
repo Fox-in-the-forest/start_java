@@ -61,24 +61,24 @@ public class IfElseStatementTheme {
 
         System.out.println("\n4. Поиск одинаковых цифр в числах");
         int number3 = 123;
-        int number3Hundreds = number3 / 100;
-        int number3Tens = number3 % 100 / 10;
         int number3Ones = number3 % 10;
+        int number3Tens = number3 % 100 / 10;
+        int number3Hundreds = number3 / 100;
         int number4 = 223;
-        int number4Hundreds = number4 / 100;
-        int number4Tens = number4 % 100 / 10;
         int number4Ones = number4 % 10;
-        if (number3Hundreds == number4Hundreds || number3Tens == number4Tens || number3Ones 
-                == number4Ones) {
+        int number4Tens = number4 % 100 / 10;
+        int number4Hundreds = number4 / 100;
+        if ( number3Ones == number4Ones || number3Tens == number4Tens ||
+                number3Hundreds == number4Hundreds) {
             System.out.println("Исходные числа: " + number3 + " и " + number4);
-            if (number3Hundreds == number4Hundreds) {
-                System.out.println("Одинаковая цифра " + number3Hundreds + " 1ый разряд");
+            if (number3Ones == number4Ones) {
+                System.out.println("Одинаковая цифра " + number3Ones + " 3ий разряд");
             }
             if (number3Tens == number4Tens) {
                 System.out.println("Одинаковая цифра " + number3Tens + " 2ой разряд");
             }
-            if (number3Ones == number4Ones) {
-                System.out.println("Одинаковая цифра " + number3Ones + " 3ий разряд");
+            if (number3Hundreds == number4Hundreds) {
+                System.out.println("Одинаковая цифра " + number3Hundreds + " 1ый разряд");
             }
         } else {
             System.out.println("Равных цифр нет");
@@ -87,68 +87,61 @@ public class IfElseStatementTheme {
         System.out.println("\n5. Определение символа по его коду");
         char someChar = '\u0032';
         if (someChar >= 'a' && someChar <= 'z') {
-            System.out.printf("маленькая буква");
+            System.out.println("маленькая буква");
         } else if (someChar >= 'A' && someChar <= 'Z') {
-            System.out.printf("большая буква");
+            System.out.println("большая буква");
         } else if (someChar >= '1' && someChar <= '9') {
-            System.out.printf("цифра");
+            System.out.println("цифра");
         } else {
-            System.out.printf("не буква и не число");
+            System.out.println("не буква и не число");
         }
-        System.out.println(" " + someChar + "\n");
+        System.out.println(someChar);
 
         System.out.println("\n6. Подсчет суммы вклада и начисленных банком %");
         int contribution = 300000;
-        int month = 1;
-        int smallDepositAmount = 5;
-        int averageDepositAmount = 7;
-        int largeDepositAmount = 10;
-        int bankInterest = (contribution * month) / (12 * 100);
+        int bankInterest = contribution / 100;
         System.out.println("Сумма Вашего вклада = " + contribution);
         if (contribution < 100000) {
-            bankInterest *= smallDepositAmount;
-            contribution += bankInterest;
+            bankInterest *= 5;
         } else if (contribution >= 100000 && contribution <= 300000) {
-            bankInterest *= averageDepositAmount;
-            contribution += bankInterest;
+            bankInterest *= 7;
         } else if (contribution > 300000) {
-            bankInterest *= largeDepositAmount;
-            contribution += bankInterest;
+            bankInterest *= 10;
         }
         System.out.println("Ваш начисленный процент = " + bankInterest);
-        System.out.println("Ваша итоговая сумма = " + contribution);
+        System.out.println("Ваша итоговая сумма = " + (contribution+bankInterest));
 
         System.out.println("\n7. Определение оценки по предметам");
-        int percentageProgramming = 91;
-        int percentageHistory = 59;
-        int markProgramming = 2;
-        int markHistory = 2;
-        if (percentageHistory > 60 && percentageHistory <= 73) {
-            markHistory = 3;
-        } else if (percentageHistory > 73 && percentageHistory <= 91) {
-            markHistory = 4;
-        } else if (percentageHistory > 91) {
-            markHistory = 5;
+        int programmingPercent = 91;
+        int historyPercent = 59;
+        int programmingMark = 2;
+        int historyMark = 2;
+        if (historyPercent > 60 && historyPercent <= 73) {
+            historyMark = 3;
+        } else if (historyPercent > 73 && historyPercent <= 91) {
+            historyMark = 4;
+        } else if (historyPercent > 91) {
+            historyMark = 5;
         }
-        if (percentageProgramming > 60 && percentageProgramming <= 73) {
-            markProgramming = 3;
-        } else if (percentageProgramming > 73 && percentageProgramming <= 91) {
-            markProgramming = 4;
-        } else if (percentageProgramming > 91) {
-            markProgramming = 5;
+        if (programmingPercent > 60 && programmingPercent <= 73) {
+            programmingMark = 3;
+        } else if (programmingPercent > 73 && programmingPercent <= 91) {
+            programmingMark = 4;
+        } else if (programmingPercent > 91) {
+            programmingMark = 5;
         }
-        int averagePoint = (markProgramming + markHistory) / 2;
-        int averagePercentage = (percentageProgramming + percentageHistory) / 2;
-        System.out.println(markProgramming + " - Программирование. " + markHistory + " - История.");
+        int averagePoint = (programmingMark + historyMark) / 2;
+        int averagePercent = (programmingPercent + historyPercent) / 2;
+        System.out.println(programmingMark + " - Программирование. " + historyMark + " - История.");
         System.out.println("Средний балл оценок по предметам : " + averagePoint);
-        System.out.println("Средний процент по предметам : " + averagePercentage);
+        System.out.println("Средний процент по предметам : " + averagePercent);
 
         System.out.println("\n8. Расчет прибыли за год");
         int rentPrice = 5000;
         int salesIncome = 13000;
         int productionCosts = 9000;
         int yearlyProfits = (salesIncome - rentPrice - productionCosts) * 12;
-        System.out.println("Прибыль за год: " + yearlyProfits);
+        System.out.println("Прибыль за год: " + yearlyProfits + " руб.");
 
         System.out.println("\n9. Подсчет количества банкнот");
         int requiredAmount = 567;
