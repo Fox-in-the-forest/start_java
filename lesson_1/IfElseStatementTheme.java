@@ -64,21 +64,21 @@ public class IfElseStatementTheme {
         int number3Ones = number3 % 10;
         int number3Tens = number3 % 100 / 10;
         int number3Hundreds = number3 / 100;
-        int number4 = 223;
+        int number4 = 123;
         int number4Ones = number4 % 10;
         int number4Tens = number4 % 100 / 10;
         int number4Hundreds = number4 / 100;
-        if ( number3Ones == number4Ones || number3Tens == number4Tens ||
+        if (number3Ones == number4Ones || number3Tens == number4Tens ||
                 number3Hundreds == number4Hundreds) {
             System.out.println("Исходные числа: " + number3 + " и " + number4);
             if (number3Ones == number4Ones) {
-                System.out.println("Одинаковая цифра " + number3Ones + " 3ий разряд");
+                System.out.println("Одинаковая цифра " + number3Ones + " 1ый разряд");
             }
             if (number3Tens == number4Tens) {
                 System.out.println("Одинаковая цифра " + number3Tens + " 2ой разряд");
             }
             if (number3Hundreds == number4Hundreds) {
-                System.out.println("Одинаковая цифра " + number3Hundreds + " 1ый разряд");
+                System.out.println("Одинаковая цифра " + number3Hundreds + " 3ий разряд");
             }
         } else {
             System.out.println("Равных цифр нет");
@@ -109,7 +109,7 @@ public class IfElseStatementTheme {
             bankInterest *= 10;
         }
         System.out.println("Ваш начисленный процент = " + bankInterest);
-        System.out.println("Ваша итоговая сумма = " + (contribution+bankInterest));
+        System.out.println("Ваша итоговая сумма = " + (contribution + bankInterest));
 
         System.out.println("\n7. Определение оценки по предметам");
         int programmingPercent = 91;
@@ -138,10 +138,14 @@ public class IfElseStatementTheme {
 
         System.out.println("\n8. Расчет прибыли за год");
         int rentPrice = 5000;
-        int salesIncome = 13000;
+        int salesIncome = 14000;
         int productionCosts = 9000;
         int yearlyProfits = (salesIncome - rentPrice - productionCosts) * 12;
-        System.out.println("Прибыль за год: " + yearlyProfits + " руб.");
+        if (yearlyProfits > 0) {
+            System.out.println("Прибыль за год: +" + yearlyProfits + " руб.");
+        } else {
+            System.out.println("Прибыль за год: " + yearlyProfits + " руб.");
+        }
 
         System.out.println("\n9. Подсчет количества банкнот");
         int requiredAmount = 567;
@@ -152,22 +156,30 @@ public class IfElseStatementTheme {
         int numberOfHundreds = requiredAmount / 100;
         int numberOfTens = requiredAmount / 10 % 10;
         int numbersOfOnes = requiredAmount % 10;
-        System.out.println("100$ - " + amountHundreds + " шт." + " 10$ - " + amountTens + "шт."
-                + " 1$ - " + amountOnes + " шт. Итого : " + allMoneyATM + "$"); // наглядно
         if (allMoneyATM < requiredAmount) {
             System.out.println("Операция отклонена. Недостаточно средств.");
         } else {
-            if (amountHundreds >= numberOfHundreds && amountTens >= numberOfTens && amountOnes
-                    >= numbersOfOnes) {
-                System.out.println("100$ - " + numberOfHundreds + " шт." + " 10$ - " +
-                        numberOfTens + "шт." + " 1$ - " + numbersOfOnes + " шт. Итого : " +
-                        requiredAmount + "$");
+            if (requiredAmount == allMoneyATM) {
+                amountHundreds = 0;
+                amountTens = 0;
+                amountOnes = 0;
             }
-            if (numberOfTens > amountTens) {
-                amountOnes = ((numberOfTens - amountTens) * 10) + numbersOfOnes;
-                System.out.println("100$ - " + numberOfHundreds + " шт." + " 10$ - " + amountTens +
-                        "шт." + " 1$ - " + amountOnes + " шт. Итого : " + requiredAmount + "$");
+            if (amountHundreds >= numberOfHundreds) {
+                amountHundreds -= numberOfHundreds;
+            }
+            if (amountTens >= numberOfTens) {
+                amountTens -= numberOfTens;
+            } else if (amountTens < numberOfTens) {
+                amountTens -= numberOfTens;
+                amountOnes += amountTens * 10;
+                amountTens = 0;
+            }
+            if (amountOnes >= numbersOfOnes) {
+                amountOnes -= numbersOfOnes;
             }
         }
+        System.out.println("100$ - " + amountHundreds + " шт." + " 10$ - " +
+                amountTens + "шт." + " 1$ - " + amountOnes + " шт. Итого : " +
+                requiredAmount + "$");
     }
 }
