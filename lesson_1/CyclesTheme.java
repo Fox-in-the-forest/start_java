@@ -12,7 +12,7 @@ public class CyclesTheme {
             }
             counterRow++;
         } while (counterRow <= 21);
-        System.out.println("в промежутке [-10, 21] сумма четных чисел = " 
+        System.out.println("в промежутке [-10, 21] сумма четных чисел = "
                 + sumEvenNum + ", а нечетных = " + sumOddNum);
 
         System.out.println("\n2. Вывод чисел в интервале (min и max) в порядке убывания");
@@ -115,6 +115,21 @@ public class CyclesTheme {
             counterColumn--;
             System.out.println("$");
         } while (counterColumn > 0);
+
+        System.out.println("\n7. Отображение ASCII-символов");
+        System.out.println("   Dec " + " Char");
+        for (int i = 0; i < 127; i++) {
+            if (i < '0' && i % 2 != 0) {
+                //System.out.printf("%5d%5d %n", i, (char) i);
+                System.out.printf("%5d", i);
+                System.out.println("     " + (char) i);
+            }
+            if (i >= 'a' && i <= 'z' && i % 2 == 0) {
+                //System.out.printf("%5d%5d %n", i, (char) i);
+                System.out.printf("%5d", i);
+                System.out.println("     " + (char) i);
+            }
+        }
 
         System.out.println("\n8. Проверка, является ли число палиндромом");
         int srcNum3 = 1234321;
