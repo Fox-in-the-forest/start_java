@@ -19,24 +19,22 @@ public class CyclesTheme {
         int num1 = 10;
         int num2 = 5;
         int num3 = -1;
-        int max = 0;
-        if (num1 > num2 && num1 > num3) {
-            max = num1;
-        } else if (num2 > num1 && num2 > num3) {
+        int max = num1;
+        if (num2 > max) {
             max = num2;
-        } else {
+        }
+        if (num3 > max) {
             max = num3;
         }
-        int min = 0;
-        if (num2 < num3 && num2 < max) {
-            min = num2;
-        } else if (num1 < num3 && num1 < max) {
+        int min = num2;
+        if (num1 < min) {
             min = num1;
-        } else {
+        }
+        if (num3 < min) {
             min = num3;
         }
         for (int i = max - 1; i > min; i--) {
-            System.out.printf(i + " ");
+            System.out.print(i + " ");
         }
 
         System.out.println("\n\n3. Вывод реверсивного числа и суммы его цифр");
@@ -44,7 +42,7 @@ public class CyclesTheme {
         int sumDigits = 0;
         while (srcNum > 0) {
             int digit = srcNum % 10;
-            System.out.printf(digit + "");
+            System.out.print(digit + "");
             srcNum /= 10;
             sumDigits += digit;
         }
@@ -68,7 +66,7 @@ public class CyclesTheme {
 
         System.out.println("\n\n5. Проверка количества двоек на четность/нечетность");
         int srcNum2 = 3242592;
-        System.out.printf("Число " + srcNum2);
+        System.out.print("Число " + srcNum2);
         int countTwos = 0;
         while (srcNum2 > 0) {
             if (srcNum2 % 10 == 2) {
@@ -77,9 +75,9 @@ public class CyclesTheme {
             srcNum2 /= 10;
         }
         if (countTwos % 2 == 0) {
-            System.out.printf(" содержит " + countTwos + " - четное количество двоек");
+            System.out.print(" содержит " + countTwos + " - четное количество двоек");
         } else {
-            System.out.printf(" содержит " + countTwos + " - нечетное количество двоек");
+            System.out.print(" содержит " + countTwos + " - нечетное количество двоек");
         }
 
         System.out.println("\n\n6. Отображение фигур в консоли");
@@ -117,12 +115,12 @@ public class CyclesTheme {
 
         System.out.println("\n7. Отображение ASCII-символов");
         System.out.println("   Dec " + " Char");
-        for (int i = 0; i < 127; i++) {
-            if (i < '0' && i % 2 != 0) {
-                System.out.printf("%5d%5d %n", i, (char) i);
+        for (int i = 1; i < 127; i++) {
+            if (i % 2 != 0 && i < 48) {
+                System.out.printf("%5d%5s %n", i, (char) i);
             }
             if (i >= 'a' && i <= 'z' && i % 2 == 0) {
-                System.out.printf("%5d%5d %n", i, (char) i);
+                System.out.printf("%5d%5s %n", i, (char) i);
             }
         }
 
