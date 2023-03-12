@@ -101,6 +101,7 @@ public class CyclesTheme {
         }
 
         counter = 0;
+        countColumns=5;
         do {
             for (int i = 0; i < counter; i++) {
                 System.out.print("$");
@@ -113,10 +114,10 @@ public class CyclesTheme {
             countColumns--;
         } while (countColumns >= 0);
 
-        System.out.println("\n7. Отображение ASCII-символов");
+        System.out.println("\n 7. Отображение ASCII-символов");
         System.out.println("   Dec " + " Char");
         for (int i = 1; i < 127; i++) {
-            if (i % 2 != 0 && i < 48) {
+            if (i % 2 != 0 && i < '0') {
                 System.out.printf("%5d%5s %n", i, (char) i);
             }
             if (i >= 'a' && i <= 'z' && i % 2 == 0) {
